@@ -3,9 +3,13 @@ const Schema = mongoose.Schema
 
 const Appdpoll = new Schema(
     {
-        name: { type: String, required: true },
-        time: { type: [String], required: true },
-        rating: { type: Number, required: true },
+        eventTimestamp: { type: Date, required: true },
+        userExperience: { type: String, required: true },
+        application: { type: String, required: true },
+        transactionName: { type: String, required: true },
+        responseTime: { type: String, required: true },
+        custMSISDN: { type: String, required: false },
+        dclmID: { type: String, required: false }
     },
     { timestamps: true },
 )

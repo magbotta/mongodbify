@@ -50,9 +50,16 @@ updateAppdpoll = async (req, res) => {
                 message: 'Appdpoll not found!',
             })
         }
-        appdpoll.name = body.name
-        appdpoll.time = body.time
-        appdpoll.rating = body.rating
+    
+        appdpoll.eventTimestamp = body.eventTimestamp
+        appdpoll.userExperience = body.userExperience
+        appdpoll.application = body.application
+        appdpoll.transactionName = body.transactionName
+        appdpoll.responseTime = body.responseTime
+        appdpoll.custMSISDN = body.custMSISDN
+        appdpoll.dclmID = body.dclmID
+
+
         appdpoll
             .save()
             .then(() => {
